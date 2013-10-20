@@ -1,0 +1,21 @@
+doctype 5
+html(lang="en")
+  head
+    meta(charset="utf8")
+    title= title
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    block stylesheet
+    block script
+  body.flexc
+    .wrapper
+      header.flexc
+        .logo peianwu.com
+        ul.flexc.sitemap
+          li home
+          li projects
+          li about
+
+      .main-section
+        block content
+
+      footer

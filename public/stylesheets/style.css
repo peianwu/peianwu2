@@ -1,0 +1,73 @@
+/*reset*/
+
+* { margin: 0; padding: 0; border: 0; 
+  font: inherient; 
+  vertical-align: baseline; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Times, "Times New Roman", serif;
+ }
+
+/*high level classes*/
+body {
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+a {
+  color: #steelblue;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.flexc {
+   display: -webkit-flex;
+   display: -ms-flex;
+   display: flex;
+}
+
+.wrapper {
+  margin: 10px 0;
+  width: 760px;
+}
+
+/*header section*/
+header {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.logo {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 0 3px;
+}
+
+.sitemap {
+  -webkit-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+ul.sitemap li {
+  color: #7d7d7d;
+  font-size: 1em;
+  list-style-type: none;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+/*content section*/
+
+.main-section {
+  margin-top: 50px;
+}
