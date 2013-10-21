@@ -23,6 +23,14 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+// rewrite url
+app.use(function(req, res, next) {
+  if (req.url.slice(0,4) === 'www.') {
+    req.url = req.url.slice(4);
+  }
+  next();
+});
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
