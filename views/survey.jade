@@ -1,0 +1,14 @@
+extends layout
+
+block stylesheet
+  link(rel="stylesheet", href="/stylesheets/survey.css")
+
+block content
+  h1 Survey
+  .survey
+    div
+      label(for="age") Age:
+      input#age(type="text" placeholder="full name")
+    div
+      label(for="gender") Gender:
+      input#gender(type="text" placeholder="your gender")
