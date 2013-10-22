@@ -8,6 +8,11 @@
   margin-bottom: 5px;
 }
 
+.survey label {
+  display: inline-block;
+  width: 60px;
+}
+
 .survey input {
   border: 1px solid #e7e7e7;
   margin-left: 3px;

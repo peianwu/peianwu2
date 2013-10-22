@@ -1,17 +1,17 @@
 /*reset*/
 
 * { margin: 0; padding: 0; border: 0; 
-  font: inherient; 
   vertical-align: baseline; }
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, Times, "Times New Roman", serif;
  }
 
-/*high level classes*/
+/*high level elements*/
 body {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
+
   font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
@@ -24,6 +24,14 @@ p {
   margin-bottom: 10px;
 }
 
+hr {
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+
+  width: 100%;
+}
+
 .flexc {
    display: -webkit-flex;
    display: -ms-flex;
@@ -31,7 +39,7 @@ p {
 }
 
 .wrapper {
-  margin: 10px 0;
+  margin: 10px 20px;
   width: 760px;
 }
 
@@ -52,6 +60,21 @@ header {
   padding: 0 3px;
 }
 
+/*content section*/
+
+.main-section {
+  margin-top: 50px;
+}
+
+
+/*footer section*/
+
+footer {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+
 .sitemap {
   -webkit-justify-content: flex-end;
   -ms-justify-content: flex-end;
@@ -64,10 +87,4 @@ ul.sitemap li {
   list-style-type: none;
   margin-top: 5px;
   margin-left: 10px;
-}
-
-/*content section*/
-
-.main-section {
-  margin-top: 50px;
 }

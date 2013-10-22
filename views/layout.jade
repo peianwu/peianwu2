@@ -4,19 +4,22 @@ html(lang="en")
     meta(charset="utf8")
     title= title
     link(rel="stylesheet", href="/stylesheets/style.css")
+    script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js")
     block stylesheet
-    block script
+    block scriptStart
   body.flexc
     .wrapper
       header.flexc
         .logo peianwu.com
+      .main-section
+        block content
+      footer
+        hr
         ul.flexc.sitemap
           li home
           li
             a(href="/survey") survey
           li about
 
-      .main-section
-        block content
-
-      footer
+    script(src="/javascripts/layout.js")
+    block scriptEnd
