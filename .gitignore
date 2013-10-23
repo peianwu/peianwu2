@@ -1,5 +1,4 @@
 # folders #
 ############
 node_modules
-public/javascripts/lib
 .elasticbeanstalk/
