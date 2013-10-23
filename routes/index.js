@@ -10,3 +10,7 @@ exports.index = function(req, res){
 exports.survey = function(req, res) {
   res.render('survey');
 };
+
+exports.about = function(req, res) {
+  res.render('about');
+};

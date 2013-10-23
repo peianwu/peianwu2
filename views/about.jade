@@ -1,0 +1,35 @@
+extends layout
+
+block stylesheet
+  link(rel="stylesheet", href="/stylesheets/about.css")
+block scriptStart
+
+block content
+  h1 me
+  section.aboutme.flexc
+    .portrait
+    
+    .info
+      ul
+        li.flexc 
+          .label name:
+          .detail Peter Wu
+        li.flexc
+          .label location:
+          .detail Taipei, Taiwan
+        li.flexc
+          .label experience:
+          .detail HTML/CSS, JavaScript, Python
+        li.flexc
+          .label other:
+          .detail.
+            I was an accounting major back in college. Worked
+            for a couple years till I slowly picked up
+            programming. I started off self-studying Python, and
+            got good enough to write some basic scripts for work.
+            My interest in web development got me into JavaScript.
+            The elegance and sophistication of the language compelled
+            me to learn Node.js as the foundation of my backend 
+            development.
+
+block scriptEnd
