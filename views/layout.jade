@@ -8,18 +8,20 @@ html(lang="en")
     block stylesheet
     block scriptStart
   body.flexc
-    .wrapper
+    .wrapper.flexc
       header.flexc
         .logo peianwu.com
-      .main-section
+      section.main
         block content
       footer
         hr
         ul.flexc.sitemap
-          li home
+          li 
+            a(href="/") home
           li
             a(href="/survey") survey
-          li about
+          li
+            a(href="/about") about
 
     script(src="/javascripts/layout.js")
     block scriptEnd
