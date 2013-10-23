@@ -16,7 +16,12 @@ body {
 }
 
 a {
-  color: steelblue;
+  color: #7b7b7b;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffa500;
   text-decoration: none;
 }
 
@@ -25,11 +30,11 @@ p {
 }
 
 hr {
-  height: 12px;
   border: 0;
-  box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
-
+  height: 12px;
   width: 100%;
+  
+  box-shadow: inset 0 3px 3px -3px rgba(0,0,0,0.5);
 }
 
 .flexc {
@@ -39,8 +44,16 @@ hr {
 }
 
 .wrapper {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
   margin: 10px 20px;
   width: 760px;
+}
+
+.projects {
+  overflow: hidden;
 }
 
 /*header section*/
@@ -53,28 +66,30 @@ header {
   align-items: flex-end;
 }
 
-.logo {
+.logo a{
+  padding: 0 3px 2px;
+  
   background-color: #000;
   color: #fff;
-  font-size: 1.2em;
-  padding: 0 3px;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: #ffa500;
 }
 
 /*content section*/
+.main {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 
-.main-section {
-  margin-top: 50px;
+  min-height: 450px;
+  padding-top: 50px;
 }
-
 
 /*footer section*/
-
-footer {
-  position: absolute;
-  bottom: 30px;
-  width: 100%;
-}
-
 .sitemap {
   -webkit-justify-content: flex-end;
   -ms-justify-content: flex-end;
@@ -82,9 +97,10 @@ footer {
 }
 
 ul.sitemap li {
+  margin-top: 5px;
+  margin-left: 10px;
+
   color: #7d7d7d;
   font-size: 1em;
   list-style-type: none;
-  margin-top: 5px;
-  margin-left: 10px;
 }
