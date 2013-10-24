@@ -13,10 +13,21 @@ h1 {
 }
 
 /*portrait section*/
+img.profilepic {
+  height: 200px;
+  width: 200px;
+}
+
 .portrait {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
 }
 
 /*bio section*/
@@ -39,4 +50,3 @@ h1 {
   width: 90px;
   color: #000;
 }
-
