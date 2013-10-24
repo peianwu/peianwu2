@@ -4,18 +4,24 @@ block stylesheet
   link(rel="stylesheet", href="/stylesheets/index.css")
 
 block content
-  h1 Welcome
-  .intro
-    p.
-      My name is Peter Wu, and I'm building this site 
-      to learn Node.js and other JS-related technologies.
-    p.
-      I'll intermittently update the contents of this site with 
-      projects and concepts I wish to experiment on, as well as improve its 
-      look and feel. I'm starting off as an 
-      absolute beginner in web development and programming, so 
-      I am curious how I progress in my learning, and hope this 
-      site can help document it.
-    p.
-      All the codes for this site can be found on 
-      <a href="https://github.com/peianwu/peianwu2">github</a>.
+  .left-index
+    h1 Welcome
+    .intro
+      p.
+        My name is Peter Wu, and I'm building this site 
+        to learn Node.js and other JS-related technologies.
+      p.
+        I'll intermittently update the contents of this site with 
+        projects and concepts I wish to experiment on, as well as improve its 
+        look and feel. I'm starting off as an 
+        absolute beginner in web development and programming, so 
+        I am curious how I progress in my learning, and hope this 
+        site can help document it.
+      p.
+        All the codes for this site can be found on 
+        <a href="https://github.com/peianwu/peianwu2">github</a>.
+  .right-index.flexc
+    h5 checkout my projects
+    ul.project-list
+      li
+        a(href="/math") a math problem generator

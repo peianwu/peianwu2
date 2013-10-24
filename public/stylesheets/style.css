@@ -85,9 +85,6 @@ section.main {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
 
   min-height: 450px;
   padding-top: 50px;

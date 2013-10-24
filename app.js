@@ -29,7 +29,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/survey', routes.survey);
+app.get('/math', routes.math);
 app.get('/about', routes.about);
 
 
