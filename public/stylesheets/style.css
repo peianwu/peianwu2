@@ -12,6 +12,7 @@ body {
   -ms-justify-content: center;
   justify-content: center;
 
+  min-width: 400px;
   font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
