@@ -1,5 +1,15 @@
 .intro {
   margin-top: 10px;
+  min-width: 340px;
   width: 45%;
   color: #7d7d7d;
+}
+
+@media screen and (max-device-width: 640px) {
+  /*realign .main section*/
+  .main {
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
 }
