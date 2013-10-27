@@ -4,4 +4,19 @@ block stylesheet
   link(rel="stylesheet", href="/stylesheets/math.css")
 
 block content
-  h1 Coming soon!
+  h1 Let's Do Some Math!
+  .math-container.flexc
+    .msgbox.flexc Click START to begin.
+      .button START
+    .problembox.flexc.hide
+      .questionblock.flexc
+        .label Question:
+        #question
+      .choiceblock.flexc
+        .label Answer:
+        #choices.flexc
+      .submitblock.flexc
+        .button Next
+
+block scriptEnd
+  script(src="/javascripts/math.js")

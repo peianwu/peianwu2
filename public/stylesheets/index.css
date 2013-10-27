@@ -14,20 +14,15 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-end;
-  -ms-align-items: flex-end;
-  align-items: flex-end;
   -webkit-justify-content: flex-end;
   -ms-justify-content: flex-end;
   justify-content: flex-end;
 
   margin-bottom: 25px;
-
 }
 
 .right-index ul {
   margin-top: 5px;
-
 }
 
 .right-index ul li {
@@ -35,14 +30,25 @@
   list-style-type: none;
 }
 
-ul.project-list a {
-  color: #000;
-  opacity: 0.5;
+.project-list {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.project-list ul li a {
+  color: rgb(125,125,125);
   text-decoration: none;
 }
 
-ul.project-list a:hover {
-  opacity: 1;
+.project-list ul li a:hover {
+  color: rgb(0,0,0);
 }
 
 .intro {
@@ -63,6 +69,10 @@ ul.project-list a:hover {
   }
 
   .right-index {
+
+  }
+
+  .project-list {
     -webkit-align-items: center;
     -ms-align-items: center;
     align-items: center;

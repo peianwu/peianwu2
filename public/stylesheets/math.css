@@ -1,0 +1,111 @@
+/*high level*/
+.mainlayout {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+/*page-wide classes*/
+.button {
+  background-color: #fff;
+  border: 2px solid #999;
+  border-radius: 3px;
+}
+
+.math-container {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 80%;
+  min-height: 50%;
+
+  background-color: #eaeaea;
+  border: 2px solid rgba(0,0,0,0.5);
+}
+
+/*msgbox styling*/
+.msgbox {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 10px auto 0;  
+}
+
+.msgbox .button {
+  margin: 10px 0;
+
+  color: #ff6103;
+  font-size: 2em;
+  text-align: center;
+}
+
+.done {
+
+  margin: 10px auto;
+
+  color: #66cd00;
+  font-size: 2em;
+}
+
+/*msgbox styling*/
+.problembox {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+.question, .choices, .submit {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0 30px;
+}
+
+.questionblock {
+  margin-top: 25px;
+  font-size: 2em;
+}
+
+.choiceblock {
+  margin-top: 30px;
+  font-size: 1.2em;
+}
+
+.submitblock {
+  -webkit-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+
+  margin-bottom: 15px;
+}
+
+.submitblock .button {
+  margin-right: 20px;
+  padding: 1px 20px;
+}
+
+.button:hover {
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+/*styling for dynamic content*/
+#choices {
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+
+  width: 50%;
+}
+
+.label {
+  margin-left: 25px;
+  width: 170px;
+}
