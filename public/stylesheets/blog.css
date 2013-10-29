@@ -1,0 +1,46 @@
+/*page flow*/
+.mainlayout {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+hr {
+  margin: 0;
+}
+
+.showpost h1 {
+  margin-bottom: 20px;
+}
+
+.post {
+  padding: 10px 10px 30px 10px;
+  font-size: 1em;
+}
+
+.post:hover {
+  background-color: #f7f7f7;
+}
+
+.title {
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.subject {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.datetime {
+  margin-left: 5px;
+  font-size: .8em;
+}
+
+.entry {
+  margin: 10px 0 0 20px;
+}

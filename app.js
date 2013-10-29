@@ -7,6 +7,12 @@ var express = require('express');
 var routes = require('./routes');
 var http = require('http');
 var path = require('path');
+var mongo = require('mongodb');
+var monk = require('monk');
+
+// connect to db
+// db = monk('localhost:27017/blogtest');
+db = monk('mongodb://peianwu:W4nn4b3384@ds053168.mongolab.com:53168/pwdb');
 
 var app = express();
 
@@ -31,7 +37,9 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/math', routes.math);
 app.get('/about', routes.about);
-
+app.get('/newpost', routes.newpost);
+app.get('/blog', routes.blog(db));
+app.post('/addpost', routes.addpost(db));
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

@@ -1,0 +1,21 @@
+extends layout
+
+block stylesheet
+  link(rel="stylesheet", href="/stylesheets/newpost.css")
+
+block content
+  .newpost
+    h1 New Post
+    form#addpost(name="addpost", method="post", action="/addpost")
+      section.subject.flexc
+        label Subject:
+        input#inputSubject(type="text", name="postsubject")
+      section.postentry.flexc
+        label Body:
+        textarea#inputPost(name="postentry")
+      section.flexc
+        label
+        #post.submitbutton Send
+
+block scriptEnd
+  script(src="/javascripts/newpost.js")

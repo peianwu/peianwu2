@@ -1,0 +1,55 @@
+/*page flow*/
+.mainlayout {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/*general elements*/
+h1,h2,h3,h4,h5,h6 {
+  margin-bottom: 10px;
+}
+
+section {
+  margin-bottom: 5px;
+}
+
+/*new post area*/
+
+label {
+  width: 60px;
+
+  font-size: .8em;
+  font-weight: normal;
+}
+
+input, textarea {
+  margin-left: 3px;
+
+  border: 2px solid #ebebeb;
+  border-radius: 3px;
+}
+
+textarea {
+  display: block;
+  width: 450px;
+  height: 200px;
+}
+
+/*other elements*/
+
+.submitbutton {
+  padding: 1px 2px;
+
+  background-color: #fff;
+  border: 2px solid #ebebeb;
+  border-radius: 3px;
+  font-size: 0.8em;
+  text-align: center;
+  width: 35px;
+}
+
+.submitbutton:hover {
+  color: #fff;
+  background-color: rgba(0,0,0,0.2);
+}
