@@ -24,7 +24,7 @@ exports.newpost = function(req, res) {
 
 exports.blog = function(db) {
   return function(req, res) {
-    var collection = db.get('blogtest');
+    var collection = db.get('blog');
     // console.log(collection);
     collection.find({}, {}, function(e, docs) {
       
@@ -47,7 +47,7 @@ exports.addpost = function(db) {
         formatDatetime = monthName[dt.getMonth()] + ' ' + dt.getUTCDate() + ', ' +
           dt.getFullYear() + ' ' + dt.getHours() + ':' + dt.getMinutes();
 
-    var collection = db.get('blogtest');
+    var collection = db.get('blog');
 
     collection.insert({
       "subject" : blogSubject,
