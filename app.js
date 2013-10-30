@@ -4,7 +4,9 @@
  */
 
 var express = require('express');
-var routes = require('./routes');
+var routes = require('./routes'),
+    blog = require('./routes/blog'),
+    project = require('./routes/project');
 var http = require('http');
 var path = require('path');
 var mongo = require('mongodb');
@@ -35,11 +37,12 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/math', routes.math);
 app.get('/about', routes.about);
-app.get('/newpost', routes.newpost);
-app.get('/blog', routes.blog(db));
-app.post('/addpost', routes.addpost(db));
+app.get('/math', project.math);
+app.get('/newpost', blog.newpost);
+app.get('/blog', blog.blog(db));
+
+app.post('/addpost', blog.addpost(db));
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
