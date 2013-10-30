@@ -18,7 +18,7 @@ exports.math = function(req, res) {
 };
 
 exports.newpost = function(req, res) {
-  res.render('newpost', { title : 'peianwu.com | blog | post test' });
+  res.render('newpost', { title : 'peianwu.com | blog | new post' });
 };
 
 
