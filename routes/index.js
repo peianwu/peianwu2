@@ -42,14 +42,19 @@ exports.addpost = function(db) {
 
     // find form values
     var blogSubject = req.body.postsubject,
-        blogEntry = req.body.postentry,
+        blogEntry = req.body.postentry;
+
         // add 8 hours for Taipei time
-        dt = function() {
-          var now = new Date();
-          return now.setHours(now.getHours() + 8);
-        },
-        formatDatetime = monthName[dt.getMonth()] + ' ' + dt.getUTCDate() + ', ' +
-          dt.getFullYear() + ' ' + dt.getHours() + ':' + dt.getMinutes();
+    // var dt = (function(hours) {
+    //       var now = new Date();
+    //       now.setHours(now.getHours() + hours);
+    //       return now;
+    //     })(0);
+    
+    var dt = new Date();
+
+    var formatDatetime = monthName[dt.getMonth()] + ' ' + dt.getDate() + ', ' +
+          dt.getFullYear() + ' ' + dt.getHours() + ':' + ('0' + dt.getMinutes()).slice(-2);
 
     var collection = db.get('blog');
 
