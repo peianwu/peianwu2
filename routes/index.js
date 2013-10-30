@@ -43,7 +43,11 @@ exports.addpost = function(db) {
     // find form values
     var blogSubject = req.body.postsubject,
         blogEntry = req.body.postentry,
-        dt = new Date(),
+        // add 8 hours for Taipei time
+        dt = function() {
+          var now = new Date();
+          return now.setHours(now.getHours() + 8);
+        },
         formatDatetime = monthName[dt.getMonth()] + ' ' + dt.getUTCDate() + ', ' +
           dt.getFullYear() + ' ' + dt.getHours() + ':' + dt.getMinutes();
 
