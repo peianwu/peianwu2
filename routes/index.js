@@ -45,15 +45,13 @@ exports.addpost = function(db) {
         blogEntry = req.body.postentry;
 
         // add 8 hours for Taipei time
-    // var dt = (function(hours) {
-    //       var now = new Date();
-    //       now.setHours(now.getHours() + hours);
-    //       return now;
-    //     })(0);
-    
-    var dt = new Date();
+    var dt = (function(hours) {
+          var now = new Date();
+          now.setHours(now.getHours() + hours);
+          return now;
+        })(8);
 
-    var formatDatetime = monthName[dt.getMonth()] + ' ' + dt.getDate() + ', ' +
+     var formatDatetime = monthName[dt.getMonth()] + ' ' + dt.getDate() + ', ' +
           dt.getFullYear() + ' ' + dt.getHours() + ':' + ('0' + dt.getMinutes()).slice(-2);
 
     var collection = db.get('blog');
