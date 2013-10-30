@@ -39,7 +39,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/about', routes.about);
 app.get('/math', project.math);
-app.get('/newpost', blog.newpost);
+app.get('/blog/new', blog.newpost);
 app.get('/blog', blog.blog(db));
 
 app.post('/addpost', blog.addpost(db));
