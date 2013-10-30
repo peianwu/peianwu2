@@ -14,8 +14,10 @@ hr {
 }
 
 .post {
+  margin: 0 auto;
   padding: 10px 10px 30px 10px;
-  font-size: 1em;
+  width: 70%; 
+  font-size: 1.3em;
 }
 
 .post:hover {

@@ -11,7 +11,7 @@ var mongo = require('mongodb');
 var monk = require('monk');
 
 // connect to db
-// db = monk('localhost:27017/blogtest');
+//db = monk('localhost:27017/blog');
 db = monk('mongodb://peianwu:W4nn4b3384@ds053168.mongolab.com:53168/pwdb');
 
 var app = express();
