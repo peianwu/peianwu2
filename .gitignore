@@ -3,3 +3,7 @@
 /data
 /node_modules
 .elasticbeanstalk/
+
+# launch_file #
+############
+app.js
