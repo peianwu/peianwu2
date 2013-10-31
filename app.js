@@ -13,8 +13,8 @@ var mongo = require('mongodb');
 var monk = require('monk');
 
 // connect to db
-//db = monk('localhost:27017/blog');
-db = monk('mongodb://peianwu:W4nn4b3384@ds053168.mongolab.com:53168/pwdb');
+db = monk('localhost:27017/blog');
+// db = monk('mongodb://peianwu:W4nn4b3384@ds053168.mongolab.com:53168/pwdb');
 
 var app = express();
 
@@ -36,11 +36,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+app.get('/', routes.index(db));
 app.get('/about', routes.about);
 app.get('/math', project.math);
 app.get('/blog/new', blog.newpost);
-app.get('/blog', blog.blog(db));
+app.get('/blog/:subject', blog.blog(db));
 
 app.post('/addpost', blog.addpost(db));
 

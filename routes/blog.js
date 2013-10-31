@@ -8,12 +8,13 @@ exports.newpost = function(req, res) {
 };
 
 exports.blog = function(db) {
+
   return function(req, res) {
+    var subject = req.params.subject.replace(/-/g,' ');
     var collection = db.get('blog');
     // console.log(collection);
-    collection.find({}, {}, function(e, docs) {
-      
-      res.render('blog', { title : 'peianwu.com | blog' , posts : docs });
+    collection.find({subject: subject}, function(e, doc) {
+      res.render('blog', { title : 'peianwu.com | blog | ' + subject, post : doc });
     });
   };
 };

@@ -21,8 +21,16 @@ block content
         All the codes for this site can be found on 
         <a href="https://github.com/peianwu/peianwu2">github</a>.
   .right-index.flexc
+    .blog-list.flexc
+      h5 latest posts
+      ul
+        - for (var i = posts.length - 1; i >= 0; i --) {
+        - var postSubject = posts[i].subject
+          li.flexc
+            a(href='/blog/' + postSubject.replace(/ /g,'-'))= postSubject + ' (' + posts[i].formatDatetime.slice(0, posts[i].formatDatetime.length - 6) + ')'
+        - }
     .project-list.flexc
-      h5 checkout my projects
+      h5 my projects
       ul
         li
-          a(href="/math") a math problem generator
+          a(href="/math") a simple math problem generator

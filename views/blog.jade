@@ -7,13 +7,13 @@ block content
   .showpost
     h1 Blog
     .blogs
-      - for (var i = posts.length - 1; i >= 0; i --) {
+      - for (var i = post.length - 1; i >= 0; i --) {
         hr
         .post
           .title.flexc
-            .subject= posts[i].subject
-            .datetime= posts[i].formatDatetime
-          .entry!= posts[i].entry
+            .subject= post[i].subject
+            .datetime= post[i].formatDatetime
+          .entry!= post[i].entry
       - }    
 
 block scriptEnd
