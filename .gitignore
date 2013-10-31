@@ -4,5 +4,6 @@
 /node_modules
 .elasticbeanstalk/
 
-# launch_file #
+# certain files #
 ############
+/config/access.js
