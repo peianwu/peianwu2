@@ -10,11 +10,13 @@ var routes = require('./routes'),
 var http = require('http');
 var path = require('path');
 var mongo = require('mongodb');
-var monk = require('monk');
 
+var monk = require('monk');
+var dbAccess = require('./config/access');
 // connect to db
 // db = monk('localhost:27017/blog');
-db = monk('mongodb://peianwu:W4nn4b3384@ds053168.mongolab.com:53168/pwdb');
+
+db = monk(dbAccess.access('mongolab'));
 
 var app = express();
 
