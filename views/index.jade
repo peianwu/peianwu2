@@ -27,7 +27,7 @@ block content
         - for (var i = posts.length - 1; i >= 0; i --) {
         - var postSubject = posts[i].subject
           li.flexc
-            a(href='/blog/' + postSubject.replace(/ /g,'-'))= postSubject + ' (' + posts[i].formatDatetime.slice(0, posts[i].formatDatetime.length - 6) + ')'
+            a(href='/blog/' + postSubject.replace(/ /g,'-'))= postSubject + ' (' + posts[i].formatDatetime.match(/^\w+\s\d+\,\s\d+/)[0] + ')'
         - }
     .project-list.flexc
       h5 my projects
